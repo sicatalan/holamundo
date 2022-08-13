@@ -54,7 +54,7 @@ ROOT_URLCONF = 'holamundo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'], #esto hay que agregarlo
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
