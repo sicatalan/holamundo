@@ -17,3 +17,9 @@ def simple(request):
     return render(request, 'simple.html', {}) 
     #información de la request, que plantilla, contexto (plantillas pueden necesitar datos)
     #en este caso es un contexto vacío
+
+def dinamico(request, name):
+    categories = ['code', 'design', 'mkt']
+    context = {'name': name,
+    'categories': categories}
+    return render(request, 'dinamico.html', context)

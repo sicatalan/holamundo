@@ -5,5 +5,6 @@ urlpatterns = [
     path('admin/', admin.site.urls), #ruta, template
     path('saludo/', views.saludo, name = 'saludo'), #por convencion se llama simpre a la vista igual a la url
     path('adulto/<int:edad>/', views.adulto, name = 'adulto'),
-    path('simple/', views.simple, name = 'simple')
+    path('simple/', views.simple, name = 'simple'),
+    path('dinamico/<str:name>/', views.dinamico, name = 'dinamico')
 ]
