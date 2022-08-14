@@ -19,7 +19,7 @@ def simple(request):
     #en este caso es un contexto vacío
 
 def dinamico(request, name):
-    categories = ['code', 'design', 'mkt']
+    categories = ['code', 'design', 'mkt', 'business']
     context = {'name': name,
     'categories': categories}
     return render(request, 'dinamico.html', context)
