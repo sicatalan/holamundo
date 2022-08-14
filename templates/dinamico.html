@@ -11,13 +11,18 @@
     <h3>Categorías</h3>
     <p>{{categories}}</p>
     <ul>
+        {# this is a single line comment #}
+        {% comment %}
+        In the inferior lines we show the different categories and mark in bold the category in the case of code
+        {% endcomment%}
         {% for category in categories %}
             {% if category == 'code' %}
-                <li><b>{{ category }}</b></li>
+                <li><b>{{ category|upper }}</b></li>
             {% else %} 
                 <li>{{ category }}</li>
             {% endif %}    
         {% endfor %}
+        <h5>Total number of categories: {{categories|length}}</h5>
     </ul>
 </body>
 </html>
